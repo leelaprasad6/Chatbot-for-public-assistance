@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 # MongoDB connection
-client = MongoClient('mongodb+srv://<username>:<password>@cluster0.mongodb.net/')
+client = MongoClient(os.getenv('MONGODB_URI'))
 db = client['user_database']
 users = db['users']
 user_data = db['user_data']
