@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Submit Data</title>
+    <style>
+      .container { max-width: 400px; margin: 50px auto; padding: 20px; }
+      .form-group { margin-bottom: 15px; }
+      input { width: 100%; padding: 8px; margin-top: 5px; }
+      .btn { background: #007bff; color: white; padding: 10px; border: none; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Submit Your Data</h1>
+      <form action="/submit-data" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" name="age" id="age" required />
+        </div>
+        <div class="form-group">
+          <label for="occupation">Occupation</label>
+          <input type="text" name="occupation" id="occupation" required />
+        </div>
+        <input type="submit" value="Submit" class="btn" />
+      </form>
+      <p><a href="/logout">Logout</a></p>
+    </div>
+  </body>
+</html>

@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Sign Up</title>
     <style>
       .container { max-width: 400px; margin: 50px auto; padding: 20px; }
       .form-group { margin-bottom: 15px; }
@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>Login</h1>
+      <h1>Sign Up</h1>
       {% with messages = get_flashed_messages() %}
         {% if messages %}
           {% for message in messages %}
@@ -22,7 +22,7 @@
           {% endfor %}
         {% endif %}
       {% endwith %}
-      <form action="/login" method="POST">
+      <form action="/signup" method="POST">
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" name="username" id="username" required />
@@ -31,9 +31,9 @@
           <label for="password">Password</label>
           <input type="password" name="password" id="password" required />
         </div>
-        <input type="submit" value="Login" class="btn" />
+        <input type="submit" value="Sign Up" class="btn" />
       </form>
-      <p>Don't have an account? <a href="/signup">Sign up</a></p>
+      <p>Already have an account? <a href="/login">Login</a></p>
     </div>
   </body>
 </html>
